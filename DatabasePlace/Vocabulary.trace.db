@@ -1,0 +1,162 @@
+09-22 13:12:10 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "NAMEBIRTHA" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,የትውልድጊዜ,ወረዳ,ከተማ,ቀበሌ FROM NameBirthA WHERE መለያቁጥር = ? [42102-167]
+09-22 13:12:10 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT መለያቁጥር,የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትዓመት,ስልክቁጥር from ATablee2007  [42102-167]
+09-22 13:14:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "NAMEBIRTHA" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,የትውልድጊዜ,ወረዳ,ከተማ,ቀበሌ FROM NameBirthA WHERE መለያቁጥር = ? [42102-167]
+09-22 13:14:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT መለያቁጥር,የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትዓመት,ስልክቁጥር from ATablee2007  [42102-167]
+09-22 13:29:07 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "NOTE1" not found; SQL statement:
+INSERT INTO Note1(Day,Title,Contents)VALUES(  '12/01/2008','lemanim','hfubkufuyf') [42102-167]
+10-26 12:18:52 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+10-26 12:19:05 jdbc[3]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-167]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:174)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:121)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:94)
+	at org.h2.Driver.connect(Driver.java:72)
+	at org.h2.jdbcx.JdbcDataSource.getJdbcConnection(JdbcDataSource.java:181)
+	at org.h2.jdbcx.JdbcDataSource.getXAConnection(JdbcDataSource.java:315)
+	at org.h2.jdbcx.JdbcDataSource.getPooledConnection(JdbcDataSource.java:341)
+	at org.h2.jdbcx.JdbcConnectionPool.getConnectionNow(JdbcConnectionPool.java:226)
+	at org.h2.jdbcx.JdbcConnectionPool.getConnection(JdbcConnectionPool.java:199)
+	at mkproject.DatabaseClass.openConnection(DatabaseClass.java:72)
+	at mkproject.AgeligilotClass$3.handle(AgeligilotClass.java:332)
+	at mkproject.AgeligilotClass$3.handle(AgeligilotClass.java:329)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8216)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3724)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3452)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1728)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2461)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:348)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:273)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:382)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:553)
+	at com.sun.glass.ui.View.notifyMouse(View.java:925)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$141(WinApplication.java:102)
+	at com.sun.glass.ui.win.WinApplication$$Lambda$37/7135120.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.h2.jdbc.JdbcSQLException: The connection was not closed by the application and is garbage collected [90018-167]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 61 more
+10-26 12:19:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+10-26 12:19:14 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2008" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2008 WHERE መለያቁጥር = ? [42102-167]
+10-26 12:19:30 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2008" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2008 WHERE መለያቁጥር = ? [42102-167]
+10-26 12:29:50 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2008" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2008 WHERE መለያቁጥር = ? [42102-167]
+10-26 12:34:28 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2008" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2008 WHERE መለያቁጥር = ? [42102-167]
+10-26 12:37:07 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2008" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2008 WHERE መለያቁጥር = ? [42102-167]
+11-13 10:11:29 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 10:12:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 10:28:21 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 10:36:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2008" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2008 WHERE መለያቁጥር = ? [42102-167]
+11-13 11:31:23 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 11:31:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2008" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2008 WHERE መለያቁጥር = ? [42102-167]
+11-13 11:31:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2008" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2008 WHERE መለያቁጥር = ? [42102-167]
+11-13 11:40:02 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 11:50:26 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 11:50:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2010" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2010 WHERE መለያቁጥር = ? [42102-167]
+11-13 11:58:47 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 12:06:48 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 12:18:49 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 12:26:45 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 12:29:50 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 12:34:04 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 12:36:02 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 12:49:09 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 12:52:46 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]
+11-13 12:54:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,አገልግሎትክፍል,ኃላፊነት,የገቡበትቀን,የገቡበትወር,የገቡበትዓመት,ስልክቁጥር FROM ATablee2007 WHERE መለያቁጥር = ? [42102-167]

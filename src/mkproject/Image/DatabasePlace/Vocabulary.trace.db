@@ -1,0 +1,6 @@
+09-22 13:00:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "NAMEBIRTHA" not found; SQL statement:
+SELECT የመጀመሪያስም,የአባትስም,የአያትስም,የትውልድጊዜ,ወረዳ,ከተማ,ቀበሌ FROM NameBirthA WHERE መለያቁጥር = ? [42102-167]
+09-22 13:00:54 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Table "ATABLEE2007" not found; SQL statement:
+SELECT መለያቁጥር,የመጀመሪያስም,የአባትስም,የአያትስም,ፆታ,ኃላፊነት,የገቡበትዓመት,ስልክቁጥር from ATablee2007 WHERE አገልግሎትክፍል ='የትምህርትና ሐዋርያዊ ክፍል' [42102-167]
