@@ -10,7 +10,6 @@ package mkproject.UserInterfaceModule;
  * and open the template in the editor.
  */
 import java.text.DateFormat;
-import java.util.Locale;
 import java.util.Date;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -22,8 +21,6 @@ import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.*;
 import javafx.stage.Stage;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 import mkproject.applicationModule.AccountApplication;
 import mkproject.resources.ResourceLoader;
 import mkproject.WorkinigInterface;
@@ -46,11 +43,11 @@ public class MainUserInterface extends Application {
     public void start(Stage primaryStage) {
 
         primaryStage = ApplicationWindow.getApplicationWindowInstance().setStageProperty();
-        userAccountUI();
+        LoginPage();
         primaryStage.show();
     }
 
-    private void userAccountUI() {
+    private void LoginPage() {
         BorderPane mainBorderP = mkproject.UserInterfaceModule.Border.getBorderPaneInstance().setBorderProperty();
         mainBorderP.maxWidth(600);
         mainBorderP.maxHeight(400);
@@ -62,13 +59,8 @@ public class MainUserInterface extends Application {
 
         System.out.println(hBox1.getHeight());
 
-        //grid panes
         GridPane gridPane = GridPaneModule.getGridPane();
 
-        //GridPane gridPaneN = GridPaneModule.getGridPane();
-        //ImageIcon image = new ImageIcon();
-
-        //Implementing Nodes for GridPane
         Label lblUserName = new Label("የተጠቃሚ ስም");
         Font font = Font.font("Nyala", 20f);
         lblUserName.setFont(font);

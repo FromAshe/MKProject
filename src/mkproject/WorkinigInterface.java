@@ -42,6 +42,10 @@ import org.h2.jdbcx.JdbcConnectionPool;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import mkproject.UserInterfaceModule.ApplicationWindow;
+import mkproject.UserInterfaceModule.CommentMenu;
+import mkproject.UserInterfaceModule.MemberDisplayMenu;
+import mkproject.UserInterfaceModule.MemberPlacementMenu;
+import mkproject.UserInterfaceModule.MemberRegisterarMenu;
 import org.h2.result.Row;
 
 /**
@@ -91,23 +95,14 @@ public class WorkinigInterface {
     Stage primaryStage = new Stage();
     PreparedStatement pst;
 
-
-
     public void startt() {
-stuQueries = new DatabaseClass();
-       // BorderPane border = new BorderPane();
+        stuQueries = new DatabaseClass();
+        // BorderPane border = new BorderPane();
         BorderPane border = mkproject.UserInterfaceModule.Border.getBorderPaneInstance().setBorderProperty();
         border.getChildren().clear();
-       
-        //border.setId("bId");
-       // primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/mkproject/Image/Mesekel.jpg")));
-        //primaryStage.setFullScreen(true);
-        //Scene scene = new Scene(border, 1200, 750);
-        //scene.setFill(Color.LIGHTSKYBLUE);
-        //primaryStage.setScene(scene);
+
+
         primaryStage = ApplicationWindow.getApplicationWindowInstance().setStageProperty();
-        //primaryStage.show();
-        //primaryStage.setTitle("የስራ አይነት መምረጫ ፎርም");
 
         Label label1 = new Label("በኢትዮጵያ ኦርቶዶክስ ተዋህዶ ቤተክርስትያን የማኅበረ ቅዱሳን የሀረር ማዕከል");
         label1.setFont(Font.font("Nyala", FontWeight.BOLD, FontPosture.REGULAR, 22));
@@ -150,32 +145,17 @@ stuQueries = new DatabaseClass();
         hBoxRadio2.setId("vBoxC");
         hBoxRadio2.setPadding(new Insets(10, 10, 10, 10));
 
-        ToggleGroup group = new ToggleGroup();
-        RadioButton fillRadioData = new RadioButton("የአባልነት ቅፅ መሙያ");
-        fillRadioData.setToggleGroup(group);
-        fillRadioData.setFont(Font.font("Nyala", FontPosture.REGULAR, 20));
-        fillRadioData.setTextFill(Color.BLACK);
-        RadioButton retrieveRadioData = new RadioButton("የአባላት መረጃ ማግኛ");
-        retrieveRadioData.setToggleGroup(group);
-        retrieveRadioData.setTextFill(Color.BLACK);
-        retrieveRadioData.setFont(Font.font("Nyala", FontPosture.REGULAR, 20));
-        RadioButton serviceRadioData = new RadioButton("አገልግሎት ክፍል መመደቢያ");
-        serviceRadioData.setToggleGroup(group);
-        serviceRadioData.setFont(Font.font("Nyala", FontPosture.REGULAR, 20));
-        serviceRadioData.setTextFill(Color.BLACK);
-        RadioButton noteRadioData = new RadioButton("ማስታወሻ ለመመዝገብ");
-        noteRadioData.setToggleGroup(group);
-        noteRadioData.setTextFill(Color.BLACK);
-        noteRadioData.setFont(Font.font("Nyala", FontPosture.REGULAR, 20));
-
-        Hyperlink logOut = new Hyperlink("ውጣ");
-        logOut.setFont(Font.font("Nyala", FontPosture.REGULAR, 20));
-        logOut.setTextFill(Color.BLUE);
-        hBoxRadio.getChildren().addAll(fillRadioData, serviceRadioData, retrieveRadioData, noteRadioData, logOut);
+        
+        MemberRegisterarMenu fillRadioData = MemberRegisterarMenu.getMeberRegisterarMenu();
+        RadioButton retrieveRadioData = MemberDisplayMenu.getDisplayInstanceMenu();//new RadioButton("የአባላት መረጃ ማግኛ");
+        RadioButton serviceRadioData = MemberPlacementMenu.getMemeberPlacementInstance();//new RadioButton("አገልግሎት ክፍል መመደቢያ");
+        RadioButton noteRadioData = CommentMenu.getCommentMenuInstance();//new RadioButton("ማስታወሻ ለመመዝገብ");
+        Hyperlink logOut = mkproject.UserInterfaceModule.LogOutLink.getLogOutLinkInstance();
         logOut.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent eve) {
 
                 //primaryStage.close();
+                
                 new MainUserInterface().start(primaryStage);
 
             }
@@ -193,6 +173,8 @@ stuQueries = new DatabaseClass();
 
         hBoxRadio1.getChildren().addAll(ivMK, label2, ivMK1);
         //hBoxRadio2.getChildren().addAll(hBoxRadio);
+        hBoxRadio = mkproject.UserInterfaceModule.Menu.getMenuInstance().menuHBox();
+
         vBoxTop.getChildren().addAll(hBoxRadio1, hBoxRadio);
 
         fillRadioData.setOnAction(new EventHandler<ActionEvent>() {
@@ -214,6 +196,7 @@ stuQueries = new DatabaseClass();
                 gridP.add(tFiName, 1, 0);
 
                 Hyperlink uploadLink = new Hyperlink("መረጃ ከፋይል ላይ ለማስገባት ይህን ይጫኑ");
+                //Hyperlink uploadLink = mkproject.UserInterfaceModule.Menu.getMenuInstance().getLogOUtHyperlink();
                 uploadLink.setFont(Font.font("Nyala", FontPosture.REGULAR, 18));
                 uploadLink.setTextFill(Color.BLUE);
 
@@ -1837,12 +1820,12 @@ stuQueries = new DatabaseClass();
                                                                         GridPane gridS = (GridPane) dialog.lookup(".header-panel");
                                                                         gridS.setStyle("-fx-background-color: cadetblue;-fx-font-family:\"Nyala\";");
                                                                         //dialog.lookup(".label.content").setStyle("-fx-font-family:\"Nyala\";");
-                                                                       
+
                                                                         Optional<String> res = alert.showAndWait();
                                                                         if (res.isPresent()) {
                                                                             addPhoto(res.get());
                                                                         }
-                                                                        
+
                                                                     }
                                                                 });
                                                                 Button fillB6 = new Button("ሙላ");
@@ -2079,7 +2062,7 @@ stuQueries = new DatabaseClass();
 
         serviceRadioData.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent eve) {
-              
+
                 gridP.getChildren().clear();
                 gridP1.getChildren().clear();
                 gridP2.getChildren().clear();
@@ -2236,15 +2219,13 @@ stuQueries = new DatabaseClass();
                 Button butFill = new Button("አስገባ");
                 butFill.setFont(Font.font("Nyala", FontWeight.BOLD, 18));
                 butFill.setStyle("-fx-text-fill: black;");
-               
-                
+
                 Button butNew = new Button("አዲስ");
                 butNew.setFont(Font.font("Nyala", FontWeight.BOLD, 18));
                 butNew.setStyle("-fx-text-fill: black;");
                 Button butSearch = new Button("ፈልግ");
                 butSearch.setFont(Font.font("Nyala", FontWeight.BOLD, 18));
                 butSearch.setStyle("-fx-text-fill: black;");
-
 
                 Hyperlink uploadLinkA = new Hyperlink("መረጃ ከፋይል ላይ ለማስገባት ይህን ይጫኑ");
                 uploadLinkA.setFont(Font.font("Nyala", FontPosture.REGULAR, 18));
@@ -2396,7 +2377,7 @@ stuQueries = new DatabaseClass();
 
                     }
                 });
-               
+
                 border.setCenter(gridP7);
                 // primaryStage.close();
             }
@@ -2442,15 +2423,13 @@ stuQueries = new DatabaseClass();
             Alert alert = new Alert(AlertType.INFORMATION);
             alert.setTitle("መረጃ መንገድ");
             alert.setContentText("Photo is sucessefully enterd");
-            
+
             alert.showAndWait();
 
         } catch (Exception ex) {
             System.out.println(ex);
         }
     }
-
- 
 
     private void displayNote(ActionEvent evt) {
 
@@ -2523,7 +2502,7 @@ stuQueries = new DatabaseClass();
         } else {
             JOptionPane.showMessageDialog(null, "Not Updated");
         }
-       
+
     }
 
 //    public static void main(String args[]) {
